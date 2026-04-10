@@ -1,0 +1,606 @@
+/* --- ОСНОВА --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Georgia,  serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.resume-page {
+    background-color: white;
+    width: 210mm; /* Стандарт A4 */
+    min-height: 297mm;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* Щоб фото не обрізалося */
+}
+
+/* --- ВЕРХНЯ ЧАСТИНА --- */
+.main-header {
+    background-color: #9f8579;
+    color: white;
+    padding: 60px 60px 40px 320px; /* Великий відступ зліва для тексту */
+    min-height: 220px;
+}
+
+    .main-header h1 {
+        font-size: 42px;
+        color: #3e2f28;
+        text-transform: none;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+
+.subtitle {
+    font-size: 20px;
+    color: #3e2f28;
+    opacity: 0.9;
+}
+
+/* --- КОНТЕНТ --- */
+.resume-content {
+    display: flex;
+    grid-template-columns: 35% 65%;
+    flex-grow: 1;
+    overflow: visible !important;
+}
+
+.left-column {
+    background-color: #9f8579;
+    margin-top: -170px;
+    color: #1a1a1a;
+    padding: 0 30px 40px 50px;
+    overflow: visible !important;
+    position: relative !important;
+}
+
+.right-column {
+    width: 65%;
+    padding: 40px 50px !important;
+    background-color: white;
+}
+
+/* --- ФОТО (ЯК НА СКРІНШОТІ) --- */
+.photo-container {
+    display: flex;
+    margin-top: -160px; /* Піднімає фото на коричневий хедер */
+    margin-bottom: 30px;
+    position: absolute !important;
+    z-index: 10;
+}
+
+.profile-photo {
+    width: 210px;
+    height: 270px;
+    border-radius: 20px;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: flex;
+}
+
+/* --- СТИЛІЗАЦІЯ ТЕКСТУ --- */
+.section-header {
+    font-size: 19px;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.thick-line {
+    height: 2px;
+    background-color: #3e2f28;
+    margin: 6px 0 15px 0;
+    width: 100%;
+}
+
+.info-group {
+    margin-bottom: 180px;
+}
+
+p, li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-weight: bold;
+    min-width: 110px;
+    display: inline-block;
+}
+
+/* --- БАЗОВІ НАЛАШТУВАННЯ --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+.resume-page {
+    background-color: white;
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- ШАПКА --- */
+.main-header {
+    background-color: #9f8579;
+    color: white;
+    padding: 60px 60px 40px 320px; /* Місце під фото */
+}
+
+    .main-header h1 {
+        font-size: 42px;
+        color: #3e2f28;
+        letter-spacing: 2px;
+        text-transform: none;
+    }
+
+.subtitle {
+    font-size: 20px;
+    color: #1a1a1a;
+    opacity: 0.8;
+}
+
+/* --- КОНТЕНТ --- */
+.resume-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.left-column {
+    background-color: #9f8579;
+    width: 35%;
+    padding: 20px 30px 30px 50px; /* Відступ як на фото 1 */
+    color: #1a1a1a;
+}
+
+.right-column {
+    width: 65%;
+    padding: 40px 50px;
+    background-color: white;
+}
+
+/* --- ФОТО --- */
+.photo-container {
+    position: relative;
+    margin-top: -160px;
+    margin-bottom: 30px;
+    z-index: 10;
+}
+
+.profile-photo {
+    width: 210px;
+    height: 270px;
+    border-radius: 20px;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+/* --- СТИЛІ ТЕКСТУ --- */
+.section-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.thick-line {
+    height: 2px;
+    background-color: #3e2f28;
+    margin: 5px 0 15px 0;
+    width: 100%;
+}
+
+p, li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.date {
+    font-weight: bold;
+    min-width: 100px;
+    display: inline-block;
+}
+
+
+/* --- ТЕМНА ТЕМА (DARK MODE) --- */
+body.darkmode {
+    background-color: #000000 !important;
+}
+
+    body.darkmode .resume-page,
+    body.darkmode .right-column {
+        background-color: #1a1a1a !important;
+    }
+
+    body.darkmode .left-column {
+        background-color: #3e332e !important;
+    }
+
+    /* Робимо весь текст, заголовки та підписи білими */
+    body.darkmode h1,
+    body.darkmode h2,
+    body.darkmode h3,
+    body.darkmode h4,
+    body.darkmode p,
+    body.darkmode li,
+    body.darkmode span,
+    body.darkmode .section-header,
+    body.darkmode .subtitle,
+    body.darkmode .university-name,
+    body.darkmode .project-title {
+        color: #ffffff !important;
+    }
+
+    /* Виправлення для дат (2024 - н.ч. тощо) */
+    body.darkmode .date,
+    body.darkmode .exp-item .date,
+    body.darkmode .education-date {
+        color: #ffffff !important;
+        font-weight: bold;
+    }
+
+    /* Виправлення лінії (thick-line) — тепер вона буде білою */
+    body.darkmode .thick-line {
+        background-color: #ffffff !important;
+        border-color: #ffffff !important; /* На випадок якщо це border */
+        opacity: 1 !important;
+    }
+
+    /* Додатково для жирних назв у секціях, як на вашому другому фото */
+    body.darkmode .exp-item h3,
+    body.darkmode .edu-item h3 {
+        color: #ffffff !important;
+        font-weight: bold !important;
+    }
+
+    /* Якщо хрестик у модальному вікні все ще темний */
+    body.darkmode .close,
+    body.darkmode .close-x {
+        color: #ffffff !important;
+    }/* --- КНОПКИ --- */
+#theme-switch, #openModalBtn {
+    position: fixed;
+    right: 20px;
+    padding: 10px 18px;
+    background: #3e2f28;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+}
+
+#openModalBtn {
+    top: 20px;
+}
+
+#theme-switch {
+    top: 70px;
+}
+
+    /* --- МОДАЛЬНЕ ВІКНО відгуків --- */
+     .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 40px;
+    border-radius: 4px;
+    max-width: 800px;
+    width: 90%;
+    max-height:85vh;
+    overflow-y: auto;
+    position: relative;
+    font-family: Georgia, serif;
+}
+    .modal-content h2 {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: -0.8px;
+        margin-bottom: 35px;
+        margin-top: 0;
+    }
+
+.close-x {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: inherit;
+}
+/* Список відгуків */
+.feedback-item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 20px;
+}
+
+.feedback-title {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    display: inline;
+}
+
+.feedback-author {
+    margin-left: 8px;
+    font-size: 11px;
+    color: #666666;
+    letter-spacing: 0px;
+}
+
+.feedback-text {
+    margin-top: 12px;
+    line-height: 1.5;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: normal;
+}
+
+/* --- ТЕМНИЙ РЕЖИМ (DARK MODE) --- */
+/* --- ПЕРЕБИВАЄМО СТИЛІ TAILWIND ДЛЯ ТЕМНОЇ ТЕМИ --- */
+
+body.darkmode {
+    background-color: #000000 !important;
+}
+
+    /* Робимо всі заголовки (Освіта, Навчальні проекти) білими */
+    body.darkmode .right-column h3,
+    body.darkmode h3 {
+        color: #ffffff !important;
+    }
+
+    /* Робимо жирний текст (Бакалавр, Навчальні проекти) білим */
+    body.darkmode .right-column strong,
+    body.darkmode strong {
+        color: #ffffff !important;
+    }
+
+    /* Робимо дати (2023-2027) білими */
+    body.darkmode .right-column span,
+    body.darkmode span {
+        color: #ffffff !important;
+    }
+
+    /* Опис університету та проектів (сірий для читабельності) */
+    body.darkmode .right-column p,
+    body.darkmode p {
+        color: #cccccc !important;
+    }
+
+    /* ВИПРАВЛЕННЯ ЛІНІЇ: робимо її білою */
+    body.darkmode .right-column div[class*="bg-[#3e2f28]"],
+    body.darkmode .h-1 {
+        background-color: #ffffff !important;
+    }
+
+    /* Якщо лінія має анімацію group-hover, ми її теж коригуємо */
+    body.darkmode .group:hover .h-1 {
+        background-color: #9f8579 !important;
+    }
+
+    /* --- МОДАЛЬНЕ ВІКНО (Зворотній зв'язок) --- */
+    body.darkmode .modal-content,
+    body.darkmode .darkmode-modal {
+        background-color: #2c2c2c !important;
+        color: #ffffff !important;
+    }
+
+    /* Написи над полями (Ім'я, Телефон) */
+    body.darkmode .form-group-v3 label,
+    body.darkmode label {
+        color: #ffffff !important;
+    }
+
+    /* Поля вводу в модалці */
+    body.darkmode input,
+    body.darkmode textarea {
+        background-color: #3d3d3d !important;
+        color: #ffffff !important;
+        border: 1px solid #ffffff !important;
+    }
+    /* --- ФУТЕР У ТЕМНОМУ РЕЖИМІ --- */
+
+    /* Робимо весь текст у футері білим */
+    body.darkmode footer,
+    body.darkmode .footer {
+        background-color: #1a1a1a !important; /* Темний фон футера, щоб текст було видно */
+        border-top: 1px solid #333333 !important;
+    }
+
+        /* Колір посилань, копірайту та параграфів у футері */
+        body.darkmode footer p,
+        body.darkmode footer span,
+        body.darkmode footer a,
+        body.darkmode .footer p,
+        body.darkmode .footer a {
+            color: #ffffff !important;
+            opacity: 1 !important;
+        }
+
+        /* Якщо у футері є іконки або логотип текстом */
+        body.darkmode footer svg,
+        body.darkmode footer i {
+            fill: #ffffff !important;
+            color: #ffffff !important;
+        }
+
+        /* Ефект наведення на посилання у футері */
+        body.darkmode footer a:hover {
+            color: #9f8579 !important; /* Коричневий акцент при наведенні */
+        }
+
+/* --- ДИЗАЙН ФОРМИ ЗВОРОТНОГО ЗВ'ЯЗКУ --- */
+.feedback-v3 {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-family: Georgia, serif;
+    transition: all 0.3s ease;
+}
+
+    .feedback-v3 h2.form-title {
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: -0.8px; /* Звужуємо ширину літер для елегантності */
+        text-align: left;
+    }
+
+.form-v3-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group-v3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+    .form-group-v3 label {
+        font-weight: bold;
+        color: #000000;
+        font-size: 15px;
+        letter-spacing: -0.3px;
+    }
+
+    .form-group-v3 input,
+    .form-group-v3 textarea {
+        border: 1px solid #ccc;
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: inherit;
+        width: 100%;
+        box-sizing: border-box;
+        letter-spacing: -0.2px;
+    }
+
+/* Кнопка "Відправити" */
+.btn-submit-v3 {
+    background-color: #ffffff;
+    color: #3e2f28; /* Коричневий колір як на кнопках теми */
+    border: 2px solid #3e2f28;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: center;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    font-family: Georgia, serif;
+}
+
+    .btn-submit-v3:hover {
+        background-color: #3e2f28;
+        color: #ffffff;
+    }
+
+/* --- ТЕМНИЙ РЕЖИМ ДЛЯ ФОРМИ --- */
+.darkmode-modal {
+    background-color: #2c2c2c !important;
+    color: #ffffff !important;
+}
+
+    /* Виправляємо колір заголовка та всіх написів (labels) */
+    .darkmode-modal h2,
+    .darkmode-modal label,
+    .darkmode-modal .form-group-v3 label {
+        color: white !important;
+        font-weight: bold !important;
+        letter-spacing: -0.3px;
+        display: block; /* Щоб напис точно був зверху */
+        margin-bottom: 5px;
+    }
+
+    /* Поля вводу */
+    .darkmode-modal .form-group-v3 input,
+    .darkmode-modal .form-group-v3 textarea,
+    .darkmode-modal input,
+    .darkmode-modal textarea {
+        background-color: #2c2c2c !important; /* Робимо фон поля таким же як у модалки, або #3d3d3d */
+        border: 1px solid #ffffff !important; /* Біла рамка як на фото */
+        color: #ffffff !important;
+        padding: 10px;
+    }
+
+        /* Плейсхолдер (текст всередині поля: "Ім'я", "Email" тощо) */
+        .darkmode-modal input::placeholder,
+        .darkmode-modal textarea::placeholder,
+        .darkmode-modal .form-group-v3 input::placeholder,
+        .darkmode-modal .form-group-v3 textarea::placeholder {
+            color: #999999 !important;
+            opacity: 1; /* Для Firefox */
+        }
+
+    /* Кнопка */
+    .darkmode-modal .btn-submit-v3 {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        border: none !important;
+        font-weight: bold;
+        padding: 12px 25px;
+        cursor: pointer;
+    }
+
+    /* Хрестик закриття */
+    .darkmode-modal .close-v3,
+    .darkmode-modal .close-x,
+    .darkmode-modal .close {
+        color: #ffffff !important;
+        opacity: 1;
+    }
